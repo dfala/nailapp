@@ -1,1 +1,10 @@
 
+#message {
+  width: 75%;
+  background-color: blue;
+  color: white;
+}
+
+#response {
+  color: black;
+}
