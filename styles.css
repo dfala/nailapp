@@ -1,18 +1,26 @@
 .container {
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .message {
   width: 75%;
   border-radius: 15px;
+  padding: 5px 12px;
 }
 
 #incoming-message {
   margin-left: auto;
-  background-color: blue;
   color: white;
+  background-color: #007AFF;
+  border: none;
 }
 
 #response {
   color: black;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+#exampleInputEmail1 {
+  border-radius: 15px;
 }
