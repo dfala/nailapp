@@ -26,10 +26,9 @@
 }
 
 .form-group {
-  float: left;
-  width: 100%;
+  
 }
 
 .btn {
-  float: right;
+  position: relative;
 }
