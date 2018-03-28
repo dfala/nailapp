@@ -1,14 +1,29 @@
 angular.module('NailChatApp', [])
-.controller('ChatController', ['$scope', function ($scope) {
+.controller('ChatController', ['$scope', 'convoService', function ($scope, convoService) {
+  var messages = convoService.returnNewRandomizedArray();
+
   $scope.botMessage = "What brings you here?";
   $scope.userMessage = 'The 2008 presidential campaign of Barack Obama, then junior United States Senator from Illinois, was announced on February 10, 2007 in Springfield, Illinois.';
+
+  $scope.newMessage = function (reply) {
+    $scope.userMessage = reply;
+    $scope.reply = '';
+    $scope.botMessage = messages.shift();
+
+    if (!messages.length) {
+      messages = convoService.returnNewRandomizedArray();
+      console.warn(messages);
+    };
+  };
+
+
 }])
 
-.factory('ConvoService', [function () {
+.factory('convoService', [function () {
   var service = {};
 
   service.returnNewRandomizedArray = function () {
-    return shuffle(messages);
+    return shuffle(angular.copy(messages));
   };
 
   function shuffle (array) {
