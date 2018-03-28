@@ -20,6 +20,7 @@ body {
   width: 75%;
   border-radius: 15px;
   padding: 5px 12px;
+  max-width: 100%;
 }
 
 #incoming-message {
