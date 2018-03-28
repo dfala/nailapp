@@ -1,7 +1,7 @@
 angular.module('NailChatApp', [])
 .controller('ChatController', ['$scope', function ($scope) {
   $scope.botMessage = "What brings you here?";
-  $scope.userMessage = '';
+  $scope.userMessage = 'The 2008 presidential campaign of Barack Obama, then junior United States Senator from Illinois, was announced on February 10, 2007 in Springfield, Illinois.';
 }])
 
 .factory('ConvoService', [function () {
