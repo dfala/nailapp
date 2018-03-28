@@ -10,6 +10,7 @@ angular.module('NailChatApp', [])
   function newBotMessage (text) {
     $timeout(function () {
       $scope.loading = true;
+      scrollContainer();
     }, 1200);
 
     $timeout(function () {
@@ -18,6 +19,7 @@ angular.module('NailChatApp', [])
         sender: 'bot',
         text: text
       });
+      scrollContainer();
     }, 2400);
   };
 
@@ -26,9 +28,12 @@ angular.module('NailChatApp', [])
       sender: 'user',
       text: text
     });
+
+    scrollContainer();
   };
 
   $scope.newMessage = function (reply) {
+    if (!reply) return;
     newUserMessage(reply);
     newBotMessage(messages.shift());
     $scope.reply = '';
@@ -38,6 +43,13 @@ angular.module('NailChatApp', [])
     };
   };
 
+  function scrollContainer () {
+    $timeout(function () {
+      var wtf    = $('#messages');
+      var height = wtf[0].scrollHeight;
+      wtf.scrollTop(height);
+    });
+  };
 
 }])
 
