@@ -10,14 +10,15 @@
 
     <section class="container" ng-controller="ChatController">
 
-      <div class="messages" ng-cloak>
-        <div class="message alert alert-info" role="alert" id="incoming-message">{{userMessage}}</div>
-        <div class="message alert alert-success" role="alert" id="response">{{botMessage}}</div>
+      <div class="messages" ng-cloak ng-repeat="message in thread">
+        <div class="message alert alert-info" ng-if="message.sender == 'user'" id="incoming-message">{{message.text}}</div>
+        <div class="message alert alert-success" ng-if="message.sender == 'bot'" id="response">{{message.text}}</div>
       </div>
 
       <form class="form" ng-submit="newMessage(reply)" autocomplete="off">
         <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputEmail1" ng-model="reply" placeholder="Tell me how you feel...">
+          <input type="text" class="form-control" id="exampleInputEmail1"
+          ng-model="reply" placeholder="Tell me how you feel..." autofocus>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
