@@ -24,3 +24,12 @@
 #exampleInputEmail1 {
   border-radius: 15px;
 }
+
+.form-group {
+  float: left;
+  width: 100%;
+}
+
+.btn {
+  float: right;
+}
