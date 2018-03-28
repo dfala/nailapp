@@ -9,11 +9,16 @@ angular.module('NailChatApp', [])
 
   function newBotMessage (text) {
     $timeout(function () {
+      $scope.loading = true;
+    }, 1200);
+
+    $timeout(function () {
+      $scope.loading = false;
       $scope.thread.push({
         sender: 'bot',
         text: text
       });
-    }, 800);
+    }, 2400);
   };
 
   function newUserMessage (text) {

@@ -17,8 +17,12 @@
 
 #response {
   color: black;
-  background-color: #e2e2e2;
+  background-color: #e9ebf0;
   border: none;
+}
+
+img {
+  max-height: 20px;
 }
 
 #exampleInputEmail1 {

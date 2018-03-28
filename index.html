@@ -5,14 +5,26 @@
     <title>NailChat</title>
     <link rel="stylesheet" href="bootstrap.min.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="styles.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="animate.css" media="screen" charset="utf-8">
   </head>
   <body>
 
     <section class="container" ng-controller="ChatController">
 
       <div class="messages" ng-cloak ng-repeat="message in thread">
-        <div class="message alert alert-info" ng-if="message.sender == 'user'" id="incoming-message">{{message.text}}</div>
-        <div class="message alert alert-success" ng-if="message.sender == 'bot'" id="response">{{message.text}}</div>
+        <div class="message alert alert-info animated-fast fadeIn"
+            ng-if="message.sender == 'user'" id="incoming-message">
+            {{message.text}}
+        </div>
+
+        <div class="message alert alert-success animated-fast fadeIn"
+            ng-if="message.sender == 'bot'" id="response">
+            {{message.text}}
+        </div>
+      </div>
+
+      <div class="message alert alert-success animated-fast fadeIn" ng-if="loading" id="response">
+        <img src="loading.gif">
       </div>
 
       <form class="form" ng-submit="newMessage(reply)" autocomplete="off">
