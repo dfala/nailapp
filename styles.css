@@ -1,6 +1,14 @@
+.container {
+  max-width: 500px;
+}
 
-#message {
+.message {
   width: 75%;
+  border-radius: 15px;
+}
+
+#incoming-message {
+  margin-left: auto;
   background-color: blue;
   color: white;
 }
