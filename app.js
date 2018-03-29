@@ -168,6 +168,10 @@ angular.module('NailChatApp', [])
     {
       sender: 'bot',
       img: 'https://media.giphy.com/media/MuztdWJQ4PR7i/giphy.gif'
+    },
+    {
+      sender: 'bot',
+      img: 'https://media0.giphy.com/media/10bDoTtJhtcHu0/giphy.gif'
     }
   ];
 
