@@ -36,8 +36,13 @@ body {
   border: none;
 }
 
-img {
+.loading-gif {
   max-height: 20px;
+}
+
+.gif {
+  max-width: 100%;
+  padding: 6px 0;
 }
 
 #exampleInputEmail1 {

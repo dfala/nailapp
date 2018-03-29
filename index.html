@@ -19,11 +19,12 @@
 
           <div class="message alert alert-success animated-fast fadeIn" ng-if="message.sender == 'bot'" id="response">
               {{message.text}}
+              <img class="gif" ng-src="{{message.img}}">
           </div>
         </div>
 
         <div class="message alert alert-success animated-fast fadeIn" ng-if="loading" id="response">
-          <img src="loading.gif">
+          <img class="loading-gif" src="loading.gif">
         </div>
       </div>
 
