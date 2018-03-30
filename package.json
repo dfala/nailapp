@@ -1,0 +1,26 @@
+{
+  "name": "nailchat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfala/nailapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dfala/nailapp/issues"
+  },
+  "homepage": "https://github.com/dfala/nailapp#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
